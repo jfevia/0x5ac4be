@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FountainBlue.Scripting\FountainBlue.Scripting.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\FountainBlue.Scripts\FountainBlue.Scripts.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Include="$(SolutionDir)FountainBlue.Scripts\*.cs" CopyToOutputDirectory="PreserveNewest" LinkBase="..\..\..\..\FountainBlue.Host.Console\bin\$(Configuration)\Scripts" />
+  </ItemGroup>
+
+</Project>

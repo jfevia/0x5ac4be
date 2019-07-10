@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FountainBlue.Host.Console", "FountainBlue.Host.Console\FountainBlue.Host.Console.csproj", "{EBF14B75-E0DE-4689-BF2F-10035DB6E231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FountainBlue.Host.Manager", "FountainBlue.Host.Manager\FountainBlue.Host.Manager.csproj", "{AAF2992B-90FD-4F9C-9C84-1C22CD88A771}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2} = {5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FountainBlue.Scripting", "FountainBlue.Scripting\FountainBlue.Scripting.csproj", "{683FB671-2454-4C52-99A0-0A2EDADC3178}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FountainBlue.Core", "FountainBlue.Core\FountainBlue.Core.csproj", "{CC825A5D-F8CC-4C47-8F5D-EFCAF63E0390}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FountainBlue.Scripts", "FountainBlue.Scripts\FountainBlue.Scripts.shproj", "{D2A08FD3-6761-474C-88A7-C0F92C893B87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FountainBlue.Scripts.Compiled", "FountainBlue.Scripts.Compiled\FountainBlue.Scripts.Compiled.csproj", "{D04684E0-5601-4F1B-87CD-96FDEBB38CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FountainBlue.Service", "FountainBlue.Service\FountainBlue.Service.csproj", "{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FountainBlue.Client.Console", "FountainBlue.Client.Console\FountainBlue.Client.Console.csproj", "{4E73413A-CFD1-49A6-91A7-93B0C92C11F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FountainBlue.Service.Provider", "FountainBlue.Service.Provider\FountainBlue.Service.Provider.csproj", "{557BBDF5-D0B9-42AD-825B-7662692C8FAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FountainBlue.Service.Core", "FountainBlue.Service.Core\FountainBlue.Service.Core.csproj", "{F9F4A202-374F-46B1-B8F7-825FE5775CE1}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		FountainBlue.Scripts\FountainBlue.Scripts.projitems*{d2a08fd3-6761-474c-88a7-c0f92c893b87}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF14B75-E0DE-4689-BF2F-10035DB6E231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF14B75-E0DE-4689-BF2F-10035DB6E231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF14B75-E0DE-4689-BF2F-10035DB6E231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF14B75-E0DE-4689-BF2F-10035DB6E231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF2992B-90FD-4F9C-9C84-1C22CD88A771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF2992B-90FD-4F9C-9C84-1C22CD88A771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF2992B-90FD-4F9C-9C84-1C22CD88A771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF2992B-90FD-4F9C-9C84-1C22CD88A771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683FB671-2454-4C52-99A0-0A2EDADC3178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683FB671-2454-4C52-99A0-0A2EDADC3178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683FB671-2454-4C52-99A0-0A2EDADC3178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683FB671-2454-4C52-99A0-0A2EDADC3178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC825A5D-F8CC-4C47-8F5D-EFCAF63E0390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC825A5D-F8CC-4C47-8F5D-EFCAF63E0390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC825A5D-F8CC-4C47-8F5D-EFCAF63E0390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC825A5D-F8CC-4C47-8F5D-EFCAF63E0390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04684E0-5601-4F1B-87CD-96FDEBB38CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04684E0-5601-4F1B-87CD-96FDEBB38CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04684E0-5601-4F1B-87CD-96FDEBB38CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04684E0-5601-4F1B-87CD-96FDEBB38CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEAF4F5-9DCD-44C8-859C-E58E4007A3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E73413A-CFD1-49A6-91A7-93B0C92C11F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E73413A-CFD1-49A6-91A7-93B0C92C11F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E73413A-CFD1-49A6-91A7-93B0C92C11F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E73413A-CFD1-49A6-91A7-93B0C92C11F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557BBDF5-D0B9-42AD-825B-7662692C8FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557BBDF5-D0B9-42AD-825B-7662692C8FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557BBDF5-D0B9-42AD-825B-7662692C8FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557BBDF5-D0B9-42AD-825B-7662692C8FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F4A202-374F-46B1-B8F7-825FE5775CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F4A202-374F-46B1-B8F7-825FE5775CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F4A202-374F-46B1-B8F7-825FE5775CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F4A202-374F-46B1-B8F7-825FE5775CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3922F0C1-757E-4A3D-ADE6-101B30707568}
+	EndGlobalSection
+EndGlobal

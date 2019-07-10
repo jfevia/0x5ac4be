@@ -1,0 +1,96 @@
+﻿<Window x:Class="FountainBlue.Host.Manager.Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:FountainBlue.Host.Manager.Converters"
+        xmlns:properties="clr-namespace:FountainBlue.Host.Manager.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="{x:Static properties:Resources.MainWindowTitle}"
+        Width="800"
+        Height="450"
+        DataContext="{Binding MainWindow, Source={StaticResource Locator}}">
+    <Window.Resources>
+        <converters:ClientEndpointToStringConverter x:Key="ClientEndpointToStringConverter" />
+    </Window.Resources>
+    <xctk:BusyIndicator IsBusy="{Binding IsBusy}">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" MinHeight="30" />
+                    <RowDefinition Height="Auto" MinHeight="30" />
+                    <RowDefinition Height="*" MinHeight="200" />
+                    <RowDefinition Height="*" MinHeight="200" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" MinWidth="200" />
+                    <ColumnDefinition Width="50*" MinWidth="300" />
+                </Grid.ColumnDefinitions>
+                <ToolBar Grid.Row="0"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="2">
+                    <Button Command="{Binding RefreshCommand}" Content="{x:Static properties:Resources.RefreshButtonContent}" />
+                    <Separator />
+                    <Button Command="{Binding ExecuteCommand}" Content="{x:Static properties:Resources.RunButtonContent}" />
+                </ToolBar>
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           FontSize="14"
+                           Text="Clients" />
+                <TextBlock Grid.Row="1"
+                           Grid.Column="1"
+                           Margin="5"
+                           VerticalAlignment="Center"
+                           FontSize="14"
+                           Text="Scripts" />
+                <ListBox Grid.Row="2"
+                         Grid.Column="0"
+                         Margin="5"
+                         ItemsSource="{Binding Clients}"
+                         SelectedItem="{Binding SelectedClient}"
+                         SelectionMode="Single">
+                    <ListBox.Template>
+                        <ControlTemplate>
+                            <ItemsPresenter />
+                        </ControlTemplate>
+                    </ListBox.Template>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource ClientEndpointToStringConverter}}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <ListBox Grid.Row="2"
+                         Grid.Column="1"
+                         Margin="5"
+                         DisplayMemberPath="Name"
+                         ItemsSource="{Binding Scripts}"
+                         SelectionChanged="ListBoxScripts_SelectionChanged"
+                         SelectionMode="Extended">
+                    <ListBox.Template>
+                        <ControlTemplate>
+                            <ItemsPresenter />
+                        </ControlTemplate>
+                    </ListBox.Template>
+                </ListBox>
+                <ScrollViewer Grid.Row="3"
+                              Grid.Column="0"
+                              Grid.ColumnSpan="2"
+                              Margin="0"
+                              Background="Black">
+                    <StackPanel>
+                        <ItemsControl ItemsSource="{Binding ConsoleOutput}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock FontFamily="Consolas"
+                                               Foreground="White"
+                                               Text="{Binding Path=.}" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </ScrollViewer>
+    </xctk:BusyIndicator>
+</Window>
